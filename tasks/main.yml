@@ -1,0 +1,21 @@
+- block: # Only configure when os is Debian
+
+  - name: Delete files that must be absent.
+    file:
+      path: "{{ item.dest }}"
+      state: absent
+    with_items: "{{ debian_unstable_files }}"
+    when: item.state | default('present') == 'absent'
+
+  - name: Configure additional repositories.
+    template:
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
+    when: item.state | default('present') == 'present'
+    with_items: "{{ debian_unstable_files }}"
+
+  when:
+    - ansible_distribution == 'Debian'
+
+
+

@@ -1,0 +1,11 @@
+galaxy_info:
+  role_name: debian_unstable
+  author: Tobias Richter
+  description: Ansible Role for adding debian unstable repository.
+  license: Apache
+  min_ansible_version: 2.7
+
+  platforms:
+  - name: Debian
+    versions:
+      - any

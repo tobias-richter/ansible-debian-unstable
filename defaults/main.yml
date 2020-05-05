@@ -1,0 +1,10 @@
+debian_unstable_state: present
+debian_unstable_files:
+  # lists
+  - src: etc/apt/sources.list.d/unstable.list.j2
+    dest: /etc/apt/sources.list.d/unstable.list
+    state: "{{ debian_unstable_state }}"
+  # preferences
+  - src: etc/apt/preferences.d/unstable.pref.j2
+    dest: /etc/apt/preferences.d/unstable.pref
+    state: "{{ debian_unstable_state }}"

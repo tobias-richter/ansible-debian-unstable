@@ -13,6 +13,13 @@
       dest: "{{ item.dest }}"
     when: item.state | default('present') == 'present'
     with_items: "{{ debian_unstable_files }}"
+    register: _unstable_config_result
+
+  - name: Update apt cache.
+    apt:
+      update_cache: yes
+    when: _unstable_config_result.changed
+
 
   when:
     - ansible_distribution == 'Debian'

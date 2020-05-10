@@ -20,6 +20,5 @@
       update_cache: yes
     when: _unstable_config_result.changed
 
-
   when:
     - ansible_distribution == 'Debian'

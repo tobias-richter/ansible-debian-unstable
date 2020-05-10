@@ -23,6 +23,3 @@
 
   when:
     - ansible_distribution == 'Debian'
-
-
-

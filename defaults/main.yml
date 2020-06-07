@@ -1,4 +1,6 @@
+# Controls if debian unstable repos are present or absent
 debian_unstable_state: present
+# List of files/templates that are configured
 debian_unstable_files:
   # lists
   - src: etc/apt/sources.list.d/unstable.list.j2

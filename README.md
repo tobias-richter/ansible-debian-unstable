@@ -1,6 +1,6 @@
 # tobias_richter.debian_unstable
 
-[![Build Status](https://travis-ci.org/tobias-richter/ansible-debian-unstable.svg?branch=master)](https://travis-ci.org/tobias-richter/ansible-debian-unstable)
+[![Build Status](https://github.com/tobias-richter/ansible-debian-unstable/workflows/CI/badge.svg)](https://github.com/tobias-richter/ansible-debian-unstable/actions)
 
 This role enables unstable repository and is designed to work together
 with
